@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZZU-Propaganda</title>
+    <style>
+        body {
+            /* 清除边距 */
+            margin: 0;
+            padding: 0;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        
+        .navbar {
+            /* 固定定位 */
+            position: fixed;
+            /* 用弹性伸缩盒显示 */
+            display: flex;
+            /* 项目在主轴上水平对齐 */
+            justify-content: center;
+            /* 交叉轴上居中对齐 */
+            align-items: center;
+            /* 主轴水平方向，起点在左端 */
+            flex-direction: row;
+            /* 定义换行情况，第一行在上方 */
+            flex-wrap: wrap;
+            /* background-color: #d4d7de; */
+            background-color: #82589F;
+            width: 100%;
+            height: 70px;
+            /* 盒子靠上 */
+            z-index: 1;
+        }
+        
+        .nav1 {
+            /* 用弹性伸缩盒显示 */
+            display: flex;
+            /* 项目在主轴上靠右对齐 */
+            justify-content: right;
+            /* 消除小li前面的小圆点 */
+            list-style: none;
+            /* 盒子距离右边15% */
+            margin-right: 15%;
+        }
+        
+        .logo {
+            /* 定义项目的放大比例,定义项目的缩小比例 */
+            /* flex-grow: 1;  flex-shrink: 1; flex-basis: auto; */
+            /* 继承父元素 navbar里面的交叉居中对齐 */
+            flex: 1 1 auto;
+            margin-left: 10%;
+            /* 英文大写 */
+            text-transform: uppercase;
+            /* 增加字符间的空白为1像素 */
+            letter-spacing: 1px;
+            font-weight: bold;
+            font-size: 35px;
+        }
+        
+        a {
+            margin: 15px;
+            color: #000000;
+            /* 消除下划线 */
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+        /* 鼠标经过链接显示紫色 */
+        
+        a:hover {
+            color: yellow;
+        }
+        
+        .banner-area {
+            /* 相对定位 */
+            position: relative;
+            background-image: url(../img/9.jpg);
+            width: 100%;
+            height: 100vh;
+            /* 背景图片不重复显示 */
+            background-repeat: no-repeat;
+            /* 使背景图片扩大填充 */
+            background-size: cover;
+        }
+        
+        .about-area,
+        .background-area,
+        .service-area,
+        .Badge-area {
+            /* 相对定位 */
+            position: relative;
+            /* 用弹性伸缩盒显示 */
+            display: flex;
+            /* 每个项目两侧的间隔相等 */
+            justify-content: space-around;
+            /* 交叉轴上居中对齐 */
+            align-items: center;
+            /* 换行,第一行在上方 */
+            flex-wrap: wrap;
+            /* 主轴水平方向，起点在左端 */
+            flex-direction: row;
+            width: 100%;
+            height: 700px;
+        }
+        
+        .text-part {
+            width: 65%;
+            height: 80%;
+        }
+        
+        h1 {
+            font-size: 50px;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        
+        p {
+            font-size: 24px;
+            line-height: 50px;
+            color: blueviolet;
+        }
+        
+        .about-area,
+        .service-area {
+            background: #fefefe;
+        }
+        
+        .background-area,
+        .Badge-area {
+            background: #262626;
+            color: #fff;
+        }
+        
+        html {
+            /* 滚动导航 */
+            scroll-behavior: smooth;
+        }
+        /* 导航style */
+        
+        .nav {
+            height: 41px;
+            border-top: 3px solid #ff8500;
+            border-bottom: 1px solid #edeef0;
+            background-color: #fcfcfc;
+            line-height: 41px;
+        }
+        
+        .nav a {
+            /* a属于行内元素，此时必须要转换 行内块元素 */
+            display: inline-block;
+            height: 41px;
+            padding: 0 20px;
+            font-size: 12px;
+            color: #4c4c4c;
+            text-decoration: none;
+        }
+        /* 链接伪类选择器  */
+        
+        .nav a:hover {
+            background-color: purple;
+            /*鼠标经过，背景变色 */
+            color: #ff8500;
+        }
+        /* 导航style */
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <a href="http://www.zzu.edu.cn/" class="logo">郑州大学</a>
+        <ul class="nav1">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#background">background</a></li>
+            <li><a href="#conditions">conditions</a></li>
+            <li><a href="#symbol">symbol</a></li>
+        </ul>
+    </div>
+
+    <!-- 第一个盒子放背景图片 -->
+    <div class="banner-area" id="home"></div>
+    <div class="about-area" id="about">
+        <div class="text-part">
+            <h1>About Area</h1>
+            <p>Zhengzhou University, founded in 1956, is located in Zhengzhou, the capital of Henan Province. It is a university jointly established by the Ministry of Education of the People's Republic of China and the People's Government of Henan Province.This
+                school has been selected into the National Plan 2011 and Plan 111. It owns the National University Science Park and has independent enrollment qualification.郑州大学，于1956年始建，坐落于河南省会郑州，是中华人民共和国教育部与河南省人民政府“部省合作共建高校”,该校入选国家2011计划、111计划.拥有国家大学科技园，具有自主招生资格。
+            </p>
+        </div>
+
+    </div>
+    <!-- 第二个盒子放学校背景 -->
+    <div class="background-area" id="background">
+        <div class="text-part">
+            <h1>School Background</h1>
+            <p>In 1952, China followed the example of the former Soviet Union to adjust the departments of colleges and universities nationwide. It planned to move a number of coastal and eastern universities to the central and western regions, and planned
+                to move Shandong University to Zhengzhou to form a new Henan University. For various reasons, Shandong University failed to settle in Zhengzhou, but moved back to Jinan.1952年，中国效仿前苏联，在全国范围内调整高校院系。计划将一批沿海和东部高校迁至中西部地区，并计划将山东大学迁至郑州，组建一所新的河南大学。由于种种原因，山东大学未能落户郑州，而是迁回济南。
+            </p>
+        </div>
+    </div>
+    <!-- 第三个盒子放办学条件 -->
+    <div class="service-area" id="conditions">
+        <div class="text-part">
+            <h1>Operating Conditions</h1>
+            <p>As of March 2018, the school has 46 departments and 114 undergraduate majors.The school has more than 5,700 faculty members, including 11 academicians and faculty members of the two academies and 4 overseas academicians; There are 7 winners,
+                752 professors and 2174 teachers with doctoral degrees in the National Science Fund for Outstanding Youth.截至2018年3月，学校下设46个院系，114个本科专业。学校有教职工5700余人，其中两院院士、学部委员11人，海外院士4人；“国家杰出青年科学基金”获得者7人、教授752人，具有博士学位教师2174人
+            </p>
+        </div>
+    </div>
+    <!-- 第四个盒子放学校校徽 -->
+    <div class="Badge-area" id="symbol">
+        <div class="text-part">
+            <h1>School Badge</h1>
+            <p>The emblem of Zhengzhou University is composed of "Z", "Big", "People" and mountain peaks, and it also represents the first letter "A" in English. The image of a giant with lofty ideals implies outstanding talents and talented people, symbolizing
+                the pillars cultivated by Zhengzhou University. The mountain peaks symbolize the enterprising spirit of students to climb the peak bravely, and the first letter "A" stands for always striving for the first place.郑州大学校徽由“Z”、“大“、”人“和山峰共同构成，又形象英文第一个字母“A”，顶天立地的巨人形象，蕴函人杰地灵、人才辈出之意，象征郑州大学培养出的栋梁之材，山峰象征学子勇攀高峰的进取精神，第一个字母“A”代表永争第一
+            </p>
+        </div>
+    </div>
+    <div class="nav">
+        <a href="#">郑大内网 </a>
+        <a href="#">郑大新闻网</a>
+        <a href="#">人才招聘</a>
+        <a href="#">学生工作</a>
+        <a href="#">校友会</a>
+        <a href="#">基金会</a>
+        <a href="#">网上办事大厅</a>
+        <a href="#">教务在线</a>
+        <a href="#">校园平面图</a>
+        <a href="#">研究生院</a>
+        <a href="#">新校区平面图</a>
+
+    </div>
+
+
+
+</body>
+<embed src="../music/2.mp3" hidden="true" loop="true" />
+
+
+</html>
